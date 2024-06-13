@@ -1,0 +1,33 @@
+<h2>Product List</h2>
+<button class="btn btn-primary" routerLink="/product/new">Add Product</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.productName }}</td>
+            <td>{{ product.productDescription }}</td>
+            <!-- <td><img width="50px" height="50px" ng-src="E:\\study practice\\10 May 2024\\ashish\\UnityOfWork\\UnityOfWork.WebApi\\uploads\\885febf5-8d0c-4d73-8649-38998594b3d6_DSC_3757.jpg" alt=""></td> -->
+            <!-- <td><img alt="{{ product.imageUrl }}" [src]="product.imageUrl" width="50px" height="50px"></td> -->
+            <td>{{ product.productPrice }}</td>
+            <td><img alt="{{ product.imageUrl }}" src="https://localhost:7075/uploads/{{ product.imageUrl }}" width="50px" height="50px"></td>
+            <td>
+                <button  class="btn btn-info" (click)="editProduct(product.id)">Edit</button>
+                <button class="btn btn-danger m-1" (click)="deleteProduct(product.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="tinyAlert()">Simple Notification</button>
+<!-- <img   src="https://localhost:7075/uploads/35d924f7-49ed-4b88-8ea2-1b43434b3104_WhatsApp 20Image 202024-04-01 20at 2010.54.01 20PM.jpeg" alt="hi"> -->
+<!-- <img src="https://localhost:7075/uploads/885febf5-8d0c-4d73-8649-38998594b3d6_DSC_3757.jpg" alt="i"> -->

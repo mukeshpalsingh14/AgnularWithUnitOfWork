@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularunit';
+  // @HostListener('window:beforeunload', ['$event'])
+  // beforeunloadHandler() {
+  //   localStorage.removeItem('auth-token');
+  // }
 }

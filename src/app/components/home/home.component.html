@@ -1,0 +1,18 @@
+<!-- src/app/components/home/home.component.html -->
+<div class="container mt-5">
+    <h1>Welcome to MyApp</h1>
+    <p class="lead">This is the home page. Use the navigation bar to sign up, log in, and manage products.</p>
+</div>
+<div class="wrap">
+  <div class="box" *ngFor="let item of products">
+    <div class="box-top">
+      <img  style="max-height:60%; max-width:100%;" src="https://localhost:7075/uploads/{{ item.imageUrl }}" alt="Girl Eating Pizza">
+      <div class="title-flex">
+        <h3 class="box-title">{{item.productName}}</h3>
+        <p class="user-follow-info">17 Projects</p>
+      </div>
+      <p class="description">{{item.productDescription}}</p>
+    </div>
+    <a href="#" class="button">Follow Kelsie</a>
+  </div>
+</div>
